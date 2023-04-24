@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> WELDCOME TO POD STATION</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+<div class="container">
+<div class="logo">
+  <img src="C:\Users\varsh\OneDrive\Desktop\podcast\logo1.jpg" width="150" height="120" >
+  <a href="#">POD STATION</a>
+</div>
+</div>
+</header>
+
+<!-- Main Content -->
+<main>
+  <div class="search">
+    <input type="text" placeholder="Search...">
+    <button>Search</button>
+    </div>
+<div class="container">
+    <h1>Most Popular Podcasts</h1>
+<a href="C:\Users\varsh\OneDrive\Desktop\podcast\horror.mp3">Listen to podcast</a>
+<div class="podcast-list">
+
+<!-- Podcast items will be added dynamically using JavaScript -->
+</div>
+</div>
+</main>
+<!-- Admin Panel -->
+<section id="admin-panel">
+<div class="container">
+    <h2>Featured Podcasts</h2>
+    <div class="podcast-grid">
+      <div class="podcast-card">
+        <img src="sa.jpg" alt="Podcast 1">
+        <h3>Sadhguru talks</h3>
+        <p>If You Are Intense and At Ease, You Are on A Spiritual Path.Set the context for a joyful, exuberant day with a short, powerful message from Sadhguru</p>
+        <audio src="C:\Users\varsh\OneDrive\Desktop\podcast\Maha-Mrutyunjaya-Mantra-108-cycles.mp3" controls></audio>
+        <button id="favoriteButton">Mark as Favorite</button>
+        <button id="resumeButton">Resume</button>
+        <script>
+          // Get the mark as favorite button and resume button elements by their IDs
+          const markAsFavoriteButton = document.getElementById('markAsFavoriteButton');
+          const resumeButton = document.getElementById('resumeButton');
+      
+          // Add click event listener to the mark as favorite button
+          markAsFavoriteButton.addEventListener('click', function() {
+            // Make an API call to mark the podcast as favorite
+            fetch('/api/favorites', { method: 'POST', body: JSON.stringify({ podcastId: 12345 }) }) // Replace with the actual podcast ID
+            .then(response => {
+              if (response.ok) {
+                alert('Podcast marked as favorite successfully!');
+              } else {
+                alert('Failed to mark podcast as favorite. Please try again later.');
+              }
+            })
+            .catch(error => {
+              console.error('Error marking podcast as favorite:', error);
+            });
+          });
+      
+          // Add click event listener to the resume button
+          resumeButton.addEventListener('click', function() {
+            // Make an API call to resume the podcast
+            fetch('/api/podcasts/12345/resume', { method: 'PUT' }) // Replace with the actual podcast ID
+            .then(response => {
+              if (response.ok) {
+                alert('Podcast resumed successfully!');
+              } else {
+                alert('Failed to resume podcast. Please try again later.');
+              }
+            })
+            .catch(error => {
+              console.error('Error resuming podcast:', error);
+            });
+          });
+        </script>
+      </div>
+      <div class="podcast-card">
+        <img src="positivity.jpg" alt="Podcast 2">
+        <h3>Minutes of Positivity </h3>
+        <p>What is positivity? Why is positivity important to cultivate? And how do you increase your positivity? Here are some strategies.</p>
+        <audio src="C:\Users\varsh\OneDrive\Desktop\podcast\0125. Imagination - AShamaluevMusic.mp3" controls></audio>
+        <button id="favoriteButton">Mark as Favorite</button>
+        <button id="resumeButton">Resume</button>
+        <script>
+          // Get the mark as favorite button and resume button elements by their IDs
+          const markAsFavoriteButton = document.getElementById('markAsFavoriteButton');
+          const resumeButton = document.getElementById('resumeButton');
+      
+          // Add click event listener to the mark as favorite button
+          markAsFavoriteButton.addEventListener('click', function() {
+            // Make an API call to mark the podcast as favorite
+            fetch('/api/favorites', { method: 'POST', body: JSON.stringify({ podcastId: 12345 }) }) // Replace with the actual podcast ID
+            .then(response => {
+              if (response.ok) {
+                alert('Podcast marked as favorite successfully!');
+              } else {
+                alert('Failed to mark podcast as favorite. Please try again later.');
+              }
+            })
+            .catch(error => {
+              console.error('Error marking podcast as favorite:', error);
+            });
+          });
+      
+          // Add click event listener to the resume button
+          resumeButton.addEventListener('click', function() {
+            // Make an API call to resume the podcast
+            fetch('/api/podcasts/12345/resume', { method: 'PUT' }) // Replace with the actual podcast ID
+            .then(response => {
+              if (response.ok) {
+                alert('Podcast resumed successfully!');
+              } else {
+                alert('Failed to resume podcast. Please try again later.');
+              }
+            })
+            .catch(error => {
+              console.error('Error resuming podcast:', error);
+            });
+          });
+        </script>
+      </div>
+      <div class="podcast-card">
+        <img src="f.jpg" alt="Podcast 3">
+        <h3>The kind of funny podcast</h3>
+        <p>Wanna laugh? Come listen to this podcast!!</p>
+        <audio src= "C:\Users\varsh\OneDrive\Desktop\podcast\TPC8520360993.mp3"controls></audio>
+        <button id="favoriteButton">Mark as Favorite</button>
+        <button id="resumeButton">Resume</button>
+        <script>
+          // Get the mark as favorite button and resume button elements by their IDs
+          const markAsFavoriteButton = document.getElementById('markAsFavoriteButton');
+          const resumeButton = document.getElementById('resumeButton');
+      
+          // Add click event listener to the mark as favorite button
+          markAsFavoriteButton.addEventListener('click', function() {
+            // Make an API call to mark the podcast as favorite
+            fetch('/api/favorites', { method: 'POST', body: JSON.stringify({ podcastId: 12345 }) }) // Replace with the actual podcast ID
+            .then(response => {
+              if (response.ok) {
+                alert('Podcast marked as favorite successfully!');
+              } else {
+                alert('Failed to mark podcast as favorite. Please try again later.');
+              }
+            })
+            .catch(error => {
+              console.error('Error marking podcast as favorite:', error);
+            });
+          });
+      
+          // Add click event listener to the resume button
+          resumeButton.addEventListener('click', function() {
+            // Make an API call to resume the podcast
+            fetch('/api/podcasts/12345/resume', { method: 'PUT' }) // Replace with the actual podcast ID
+            .then(response => {
+              if (response.ok) {
+                alert('Podcast resumed successfully!');
+              } else {
+                alert('Failed to resume podcast. Please try again later.');
+              }
+            })
+            .catch(error => {
+              console.error('Error resuming podcast:', error);
+            });
+          });
+        </script>
+      </div>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<div class="container">
+<p>Copyright &copy; Podcast App 2023
+</div>
+</footer>
+</body>
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: Arial, sans-serif;
+text-align: right;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 10px;
+text-align: left;
+}
+
+/* Header Styles */
+
+.logo a {
+color: #e9e8e8;
+font-size: 2.5em;
+font-weight: bold;
+text-decoration: none;
+}
+
+nav ul {
+display: inline-block;
+}
+
+
+
+
+body {font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #09115e;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0e0d1a;
+}
+
+.hero-section {
+  background-image: url('hero-background.jpg');
+  background-size: cover;
+  color: #121412;
+  padding: 100px;
+}
+
+.featured-section {
+  padding: 10px;
+}
+
+.featured-section h2 {
+  margin-bottom: 10px;
+}
+
+.podcast-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.podcast-card {
+  border: 1px solid #111010;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+.podcast-card img {
+  max-width: 100%;
+}
+
+footer {
+  background-color: #080808;
+  color: #f8f2f2;
+  text-align: center;
+  padding:0.01px;
+}
+
+/* audio Styles */
+audio {
+   width: 100%;
+   background: #faf8f8;
+   padding: 10px;
+   border-radius: 5px;
+}
+
+
+audio::-webkit-media-controls-panel {
+   background-color: #dbd9d9;
+   color: #444343;
+}
+audio::-webkit-media-controls-play-button {
+   background-image: url("C:\Users\varsh\OneDrive\Desktop\podcast\play.png.png");
+   color:#e4e1e1
+}
+/* Style for the buttons, you can customize as needed */
+button {
+  background-color: #e2dfdf;
+  padding: 10px;
+  margin: 5px;
+}
+
+
+</style>
+</html>
